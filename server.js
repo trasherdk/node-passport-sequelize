@@ -13,8 +13,13 @@ app.use(bodyParser.json());
 
 // Passport
 app.use(
-  session({ secret: 'rHUyjs6RmVOD06OdOTsVAyUUCxVXaWci', resave: true, saveUninitialized: true })
+  session({
+	  	secret: 'rHUyjs6RmVOD06OdOTsVAyUUCxVXaWci',
+	  	resave: true,
+	  	saveUninitialized: true
+  	})
 ); // session secret
+
 app.use(passport.initialize());
 app.use(passport.session());
 
