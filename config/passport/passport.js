@@ -11,7 +11,7 @@ module.exports = (passport, user) => {
 
   // used to deserialize the user
   passport.deserializeUser((id, done) => {
-    User.findById(id).then(user => {
+    User.findByPk(id).then(user => {
       if (user) {
         done(null, user.get());
       } else {
